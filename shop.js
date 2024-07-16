@@ -1,5 +1,6 @@
-import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View, } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native'
 
 export function Shop() {
   return (
@@ -7,16 +8,14 @@ export function Shop() {
     <SafeAreaView >
     <View>
     
+
+
     <View>
-    <TouchableOpacity>
-    <Image source ={require("./assets/back (1).png")} style={styles.img1} />
-    </TouchableOpacity>
-    </View>
-    <View>
-    <TouchableOpacity>
+    <TouchableOpacity onPress={()=>console.log("Cart pressed")}>
         <Image source={require("./assets/shopping-cart.png")} style={styles.img2}/>
         </TouchableOpacity>
     </View>
+    
     <View style={styles.obj}>
         <Image source={require("./assets/pngwing.com.png")} style={styles.first} />
         </View>
@@ -77,15 +76,17 @@ const styles = StyleSheet.create({
     },
     fir:{
         flex:1,
-        backgroundColor:"white"
+        backgroundColor:"gray"
     },
     img2:{
         height:50,
         width:50,
         backgroundColor:"#68e7f0",
         borderRadius:50,
-        marginLeft:340,
-        marginTop:-70,
+       marginLeft:340,
+      
+        
+        
         
     },
     obj:{
@@ -150,3 +151,11 @@ const styles = StyleSheet.create({
         
     }
 })
+
+/*img 1
+<View>
+    <TouchableOpacity>
+    <Image source ={require("./assets/back (1).png")} style={styles.img1} />
+    </TouchableOpacity>
+    </View>
+   */
