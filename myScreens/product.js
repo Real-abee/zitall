@@ -1,32 +1,29 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View, } from 'react-native'
+import { Button, Image, StyleSheet, Text, TouchableOpacity, View, } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-export function Shop() {
+export function Products() {
   return (
-    <View>
+    <View style= {styles.fir}>
     <SafeAreaView >
     <View>
     
-    <View style={styles.img2}>
+    <View>
     <TouchableOpacity onPress={()=>console.log("Cart pressed")}>
-        <MaterialCommunityIcons name="cart-variant" size={60} color="#16090b" />
+        <Image source={require("../assets/shopping-cart.png")} style={styles.img2}/>
         </TouchableOpacity>
     </View>
     
     <View style={styles.obj}>
-        <Image source={{uri:"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-pro-1.jpg"}} 
-            style={{width:300, height:300}}
-        />
+        <Image source={require("../assets/pngwing.com.png")} style={styles.first} />
         </View>
         <View style={styles.texts}>
         <View>
-            <Text style={styles.tzt}>iphone 15 Pro Max</Text>
+            <Text style={styles.tzt}>Ashdown bass combo speaker</Text>
             </View>
            <View style={styles.price}>
             <Text style={styles.cash}>
-                NGN 3000,000
+                NGN 300,000
             </Text>
             </View>
             <View style={styles.offf}>
@@ -37,14 +34,16 @@ export function Shop() {
 
         </View>
         <View >
-            <Image source={require("./assets/star.png")} style={styles.star}/>
+            <Image source={require("../assets/star.png")} style={styles.star}/>
 
         </View>
         <View style={styles.rate}>
                 <Text style={styles.rts}>
                     4.5
                 </Text>
-            </View>           
+            </View>
+
+           
             <TouchableOpacity>
             <View style={styles.cart}>
                 <Text style={styles.add}>
@@ -54,32 +53,57 @@ export function Shop() {
                 </TouchableOpacity>
            
       </View>
+      
       </SafeAreaView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  
+    first:{
+      height:400,
+      width:300,
+      margin:10,
+    },
+    img1:{
+        height:50,
+        width:50,
+        backgroundColor:"#68e7f0",
+        borderRadius:50,
+        margin:20,
+        
+    },
+    fir:{
+        flex:1,
+        backgroundColor:"gray"
+    },
     img2:{
-       marginLeft:340,    
+        height:50,
+        width:50,
+        backgroundColor:"#68e7f0",
+        borderRadius:50,
+       marginLeft:340,
+      
+        
+        
+        
     },
     obj:{
-    padding:20,
         alignItems:"center"
     },
     tzt:{
         fontSize:20,
         fontWeight:"600",
         fontStyle:"italic",
-        textAlign:"center"
        
     },
     texts:{
-      
+        marginLeft:20,
+        
+        width:290,
+        borderRadius:5
     },
     price:{
-        marginLeft:10,
         marginTop:40,
     },
     cash:{
@@ -87,7 +111,6 @@ const styles = StyleSheet.create({
         fontWeight:"600"
     },
     off:{
-        marginLeft:10,
         color:"red",
         fontSize:30,
     },
@@ -108,7 +131,6 @@ const styles = StyleSheet.create({
        
     },
     rts:{
-        marginTop:0,
         fontSize:20
     },
     cart:{
@@ -129,3 +151,10 @@ const styles = StyleSheet.create({
     }
 })
 
+/*img 1
+<View>
+    <TouchableOpacity>
+    <Image source ={require("./assets/back (1).png")} style={styles.img1} />
+    </TouchableOpacity>
+    </View>
+   */

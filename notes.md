@@ -6,4 +6,13 @@ safeareaview from react native safe area context does the work of safe areview f
 VALIDATION: we nedd formik to collect data from forms and yup for giving validation rules, formik also gives error message. we can use formik without yup
 git push .
 git commit -m "commit message"
-git oush origin "main/master"
+git push origin "main/master"
+
+day 16:
+fire store SELECT
+
+{1024X1024 FOE ICON
+
+1284x2778 for splash screen}
+
+
